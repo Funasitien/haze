@@ -65,9 +65,10 @@ public class Filter {
      */
     public @NotNull KeyValue<@Nullable Operator, @NotNull KeyValue<String, Value>> get() throws IndexOutOfBoundsException {
         Operator operator = null;
-        try {
+        
+        if (this.pointer > 0) {
             operator = this.operators.get(this.pointer - 1);
-        } catch (Exception ignore) {}
+        }
         
         KeyValue<String, Value> value = this.filters.get(this.pointer);
         
