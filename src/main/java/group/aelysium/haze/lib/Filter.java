@@ -46,8 +46,7 @@ public class Filter {
      * In order to read the value the pointer is pointing to, call {@link #get()}.
      */
     public boolean next() {
-        if(this.pointer >= this.filters.size()) {
-            this.pointer = this.filters.size();
+        if(this.pointer >= this.filters.size() - 1) {
             return false;
         }
         this.pointer++;
