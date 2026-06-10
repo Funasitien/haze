@@ -1,4 +1,4 @@
-package group.aelysium.haze.lib;
+ package group.aelysium.haze.lib;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -66,7 +66,7 @@ public class Filter {
     public @NotNull KeyValue<@Nullable Operator, @NotNull KeyValue<String, Value>> get() throws IndexOutOfBoundsException {
         Operator operator = null;
         
-        if (this.pointer > 0) {
+        if (this.pointer > 0 && this.pointer - 1 < this.operators.size()) {
             operator = this.operators.get(this.pointer - 1);
         }
         
